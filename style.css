@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+:root {
+  --Background-blue: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+  font-size: 18px;
+}
+body{
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80vw;
+}
+.profile{
+    grid-row: 1/3;
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+}
+.profile-top{
+    padding: 20px;
+    color: var(--Pale-Blue);
+    border-radius: 15px;
+    background-color: var(--Background-blue);
+}
+.profile-top h6{
+    font-weight: 300;
+    margin-top: 25px;
+}
+.profile-top h2{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.profile ul{
+    list-style: none;
+    padding: 25px;
+}
+.profile ul li{
+    margin: 5px 0;
+    color: var(--Desaturated-blue);
+}
+.profile ul li.active{
+    color: var(--Pale-Blue);
+}
+.profile-top .img{
+    width: 80px;
+    height: 80px;
+} 
+.calenda{
+    cursor: pointer;
+}
+.profile-top div img{
+    border-radius: 100%;
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+}
+.calenda:hover{
+    color: var(--Pale-Blue);
+}
+.card-bottom{
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+    padding: 20px;
+    color: var(--Desaturated-blue);
+}
+.card-bottom .title-div{
+    background-image: url("./images/icon-ellipsis.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+.card-bottom p{
+    font-weight: 300;
+    font-size: 0.5rem;
+    margin-bottom: 5px;
+}
+.card-bottom div p{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--Pale-Blue);
+}
+.card-bottom h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--Pale-Blue);
+    margin: 20px 0 5px 0;
+}
+.card{
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 60px;
+    border-radius: 15px;
+}
+.work{
+    background-image: url("./images/icon-work.svg");
+    background-color: var(--work);
+}
+.play{
+    background-image: url("./images/icon-play.svg");
+    background-color: var(--play);
+}
+.study{
+    background-image: url("./images/icon-study.svg");
+    background-color: var(--study);
+}
+.exercise{
+    background-image: url("./images/icon-exercise.svg");
+    background-color: var(--exercise);
+}
+.social{
+    background-image: url("./images/icon-social.svg");
+    background-color: var(--social);
+}
+.self-care{
+    background-image: url("./images/icon-self-care.svg");
+    background-color: var(--self-care);
+}
+
+
+@media screen and (max-width: 785px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .profile{
+        grid-row: 1/7;
+    }
+    body{
+        height: 100%;
+    }
+    .current-div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card-bottom h3{
+        margin: 0 0 5px 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+    body{
+        background-color: var(--Very-dark-blue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .profile ul{
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+    }
+  
+    .profile-top{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    .user{
+        width: 100%;
+    }
+    .profile-top h2{
+        font-size: 1rem;
+
+    }
+    .current-div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card-bottom h3{
+        margin: 0 0 5px 0;
+    }
+}
