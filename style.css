@@ -5,6 +5,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -38,9 +39,7 @@ body{
     justify-content: center;
     height: 100vh;
 }
-footer{
-  color: white;
-}
+
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
